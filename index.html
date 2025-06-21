@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TicketMaster | Inicio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>TicketMaster | Tu acceso a los mejores eventos</title>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -16,9 +14,10 @@
         <nav>
             <ul>
                 <li><a href="#home">Inicio</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#compras">Compra Entradas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#eventos">Eventos Destacados</a></li>
+                <li><a href="#compras">Entradas</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
     </header>
@@ -26,72 +25,86 @@
     <!-- Sección de inicio -->
     <section id="home">
         <div class="hero">
-            <h1>Bienvenido a TicketMaster</h1>
-            <p>Compra tus entradas para eventos de forma rápida y sencilla.</p>
+            <h1>¡Explora, elige y disfruta!</h1>
+            <p>Con TicketMaster puedes reservar tus entradas en segundos.</p>
         </div>
     </section>
 
     <!-- Sección de eventos -->
     <section id="eventos">
-        <h2>Próximos Eventos</h2>
+        <h2>Eventos Destacados</h2>
         <div class="eventos-container">
             <div class="evento">
-                <img src="assets/images/evento1.png" alt="Concierto de Rock">
+                <img src="assets/img/rockshow.jpg" alt="Concierto de Rock">
                 <h3>Concierto de Rock</h3>
-                <p>Fecha: 25 de junio, 2025</p>
-                <p>Ubicación: Arena de Lima</p>
-                <button>Ver Entradas</button>
+                <p><strong>Fecha:</strong> 25 de junio, 2025</p>
+                <p><strong>Lugar:</strong> Arena Nacional de Lima</p>
+                <button>Comprar Entradas</button>
             </div>
             <div class="evento">
-                <img src="assets/images/evento2.png" alt="Festival de Música">
+                <img src="assets/img/festival.jpg" alt="Festival de Música">
                 <h3>Festival de Música</h3>
-                <p>Fecha: 30 de junio, 2025</p>
-                <p>Ubicación: Parque Central</p>
-                <button>Ver Entradas</button>
+                <p><strong>Fecha:</strong> 30 de junio, 2025</p>
+                <p><strong>Lugar:</strong> Parque Central</p>
+                <button>Comprar Entradas</button>
             </div>
             <div class="evento">
-                <img src="assets/images/evento3.png" alt="Obra de Teatro">
+                <img src="assets/img/teatro.jpg" alt="Obra de Teatro">
                 <h3>Obra de Teatro</h3>
-                <p>Fecha: 15 de julio, 2025</p>
-                <p>Ubicación: Teatro Nacional</p>
-                <button>Ver Entradas</button>
+                <p><strong>Fecha:</strong> 15 de julio, 2025</p>
+                <p><strong>Lugar:</strong> Teatro Nacional</p>
+                <button>Comprar Entradas</button>
             </div>
         </div>
     </section>
 
     <!-- Sección de compra de entradas -->
     <section id="compras">
-        <h2>Compra tus Entradas</h2>
-        <form action="#" method="POST">
-            <label for="evento">Selecciona el Evento:</label>
+        <h2>Compra tus Entradas Aquí</h2>
+        <form action="/api/compra" method="POST">
+            <label for="evento">Evento:</label>
             <select id="evento" name="evento">
-                <option value="evento1">Concierto de Rock</option>
-                <option value="evento2">Festival de Música</option>
-                <option value="evento3">Obra de Teatro</option>
+                <option value="rock">Concierto de Rock</option>
+                <option value="festival">Festival de Música</option>
+                <option value="teatro">Obra de Teatro</option>
             </select>
 
-            <label for="cantidad">Cantidad de Entradas:</label>
+            <label for="cantidad">Entradas:</label>
             <input type="number" id="cantidad" name="cantidad" min="1" max="10" required>
 
-            <label for="nombre">Nombre:</label>
+            <label for="nombre">Nombre Completo:</label>
             <input type="text" id="nombre" name="nombre" required>
 
-            <label for="email">Correo Electrónico:</label>
+            <label for="email">Correo:</label>
             <input type="email" id="email" name="email" required>
 
-            <button type="submit">Comprar Entradas</button>
+            <button type="submit">Finalizar Compra</button>
         </form>
     </section>
 
     <!-- Sección de contacto -->
     <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Si tienes alguna pregunta, no dudes en contactarnos a <a href="mailto:soporte@eventos.com">soporte@eventos.com</a></p>
+        <h2>Contáctanos</h2>
+        <p>¿Tienes dudas? Escríbenos a <a href="mailto:ayuda@ticketmaster.com">ayuda@ticketmaster.com</a></p>
+    </section>
+
+    <!-- Sección FAQ agregada -->
+    <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <ul>
+            <li>¿Puedo cancelar mi entrada? — Depende del evento.</li>
+            <li>¿Cómo recibo mis boletos? — Por correo electrónico.</li>
+        </ul>
     </section>
 
     <!-- Pie de página -->
     <footer>
-        <p>&copy; 2025 Sistema de Gestión de Entradas. Todos los derechos reservados.</p>
+        <p>&copy; 2025 TicketMaster Corp. Todos los derechos reservados.</p>
+        <p>Síguenos en redes sociales:
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a>
+        </p>
     </footer>
 
 </body>
